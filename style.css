@@ -1,0 +1,269 @@
+
+:root {
+    --cor-plano-de-fundo-corpo: hsl(206, 47%, 93%);
+    --cor-plano-de-fundo-comunidade: hsl(0deg 0% 100%);
+    --cor-plano-de-fundo-assinatura: hsl(179deg 61% 44%);
+    --cor-plano-de-fundo-porQueNos: hsl(179deg 47% 52%);
+    
+    --cor-do-titulo-comunidade: hsl(179, 62%, 43%);
+    --cor-do-paragrafo-garantia: hsl(71, 73%, 54%);
+    --cor-do-paragrafo-obtenha: hsl(218, 22%, 67%);
+
+    --cor-do-titulo-assinatura: hsl(204, 43%, 93%);
+    --cor-do-numeroDoPreco: hsl(0deg 0% 100%);
+    --cor-do-prasoDeValidade: hsl(204, 43%, 85%);
+    --cor-do-acesso: hsl(204, 43%, 93%);
+    --cor-do-botaoInscrevaSe: hsl(204, 43%, 93%);
+    --cor-de-fundo-botaoInscreva-se:hsl(71, 73%, 54%);
+
+    --cor-do-titulo-proQueNos: hsl(204, 43%, 93%);
+    --cor-do-paragrafo-porQueNos: hsl(204, 43%, 85%);
+}
+
+
+body {
+    background-color: var(--cor-plano-de-fundo-corpo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 84vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    grid-template-columns: 1fr;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 10px hsl(180deg 100% 89% / 50%);
+}
+
+.comunidade, .assinatura, .porQueNos {
+    padding-inline: 6vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.comunidade {
+    height: auto;
+    background-color: var(--cor-plano-de-fundo-comunidade);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.comunidade h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: var(--cor-do-titulo-comunidade);
+    margin-bottom: 4vh;
+}
+
+.garantia {
+    font-size: 4vw;
+    font-weight: 700;
+    color: var(--cor-do-paragrafo-garantia);
+    margin-bottom: 4vh;
+}
+
+.obtenha {
+    font-size: 4vw;
+    font-weight: 400;
+    color: var(--cor-do-paragrafo-obtenha);
+    line-height: 7vw;
+}
+
+.assinatura {
+    background-color: var(--cor-plano-de-fundo-assinatura);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+
+.assinatura h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: var(--cor-do-titulo-assinatura);
+    margin-bottom: 4vw;
+}
+
+.preco {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.numeroDoPreco {
+    font-size: 8vw;
+    font-weight: 700;
+    color: var(--cor-do-numeroDoPreco);
+    margin: 0;
+}
+
+.prasoDeValidade {
+    font-size: 4vw;
+    font-weight: 400;
+    color: var(--cor-do-prasoDeValidade);
+    margin-left: 3vw;
+}
+
+.acesso {
+    font-size: 4vw;
+    font-weight: 400;
+    color: var(--cor-do-acesso);
+    margin: 0;
+    margin-bottom: 7vw;
+}
+
+.botaoInscrevaSe {
+    width: 100%;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    font-size: 5vw;
+    color: var(--cor-do-botaoInscrevaSe);
+    background-color: var(--cor-de-fundo-botaoInscreva-se);
+    border-color: transparent;
+    border-radius: 1vw;
+    box-shadow: 0px 1px 10px 1px hsla(0, 0%, 0%, 0.3);
+    margin-bottom: 4vw;
+    cursor: pointer;
+}
+
+.porQueNos {
+    background-color: var(--cor-plano-de-fundo-porQueNos);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.porQueNos h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: var(--cor-do-titulo-proQueNos);
+    margin-bottom: 4vw;
+}
+
+.porQueNos p {
+    font-size: 3.5vw;
+    color: var(--cor-do-paragrafo-porQueNos);
+    margin: 0;
+    margin-bottom: 1vw;
+}
+
+.porQueNos p:last-child {
+    margin-bottom: 3vw;
+}
+
+@media screen and (min-width: 900px) {
+    
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        margin-inline: 25vw;
+    }
+
+    .comunidade, .assinatura, .porQueNos {
+        padding-inline: 2vw;
+    }
+
+    .comunidade h1, .assinatura h1, .porQueNos h1 {
+        margin-top: 1vw;
+        margin-bottom: 3vw;
+    }
+
+    .comunidade {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .comunidade h1 {
+        font-size: 1.7vw;
+        margin-bottom: 2vh;
+    }
+
+    .garantia {
+        font-size: 1.3vw;
+        margin-bottom: 1.4vh;
+    }
+
+    .obtenha {
+        font-size: 1.1vw;
+        line-height: 1.8vw;
+        margin-top: 0;
+    }
+
+    .assinatura {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .assinatura h1 {
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+
+    .preco {
+        margin-bottom: 1vw;
+    }
+
+    .numeroDoPreco {
+        font-size: 2vw;
+    }
+
+    .prasoDeValidade {
+        font-size: 1.2vw;
+        margin: 0;
+        margin-left: 0.7vw;
+    }
+
+    .acesso {
+        font-size: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    .botaoInscrevaSe {
+        padding-top: 0.7vw;
+        padding-bottom: 0.7vw;
+        border-radius: 0.5vw;
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+    }
+    
+    .porQueNos {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .porQueNos h1 {
+        font-size: 1.4vw;
+        margin-bottom: 1.3vw;
+    }
+
+    .porQueNos p {
+        font-size: 1vw;
+        margin: 0;
+        margin-bottom: 0.3vw;
+    }
+
+    .porQueNos p:last-child {
+        margin-bottom: 0vw;
+    }
+
+}
